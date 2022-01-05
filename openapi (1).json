@@ -1,0 +1,181 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "CDC-PT",
+    "description": "",
+    "termsOfService": "",
+    "contact": {},
+    "license": {
+      "name": ""
+    },
+    "version": "3366afcd-2847-4fce-8b86-d7f5e1067c46"
+  },
+  "externalDocs": {
+    "description": "",
+    "url": ""
+  },
+  "servers": [
+    {
+      "url": "https://stgairport.emirates.dev",
+      "description": ""
+    }
+  ],
+  "paths": {
+    "/ekcdc/server/cdc/asc": {
+      "post": {
+        "summary": "04_cdc-mw-pdf-save-as-draft",
+        "operationId": "04_cdc-mw-pdf-save-as-draft",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "/init"
+            }
+          },
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibW9iaWxlIiwiaWF0IjoxNjQwODUzMDE1LCJleHAiOjE2NDA4NTQ4MTV9.Q1jf1bLGdydweAL8o2pftARzF7Y_j42cVutzTP_pAS0"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "example": "{\"url\":\"cdu/document/pdf\",\"method\":\"POST\",\"body\":{\"channel\":\"mobile\",\"referenceNumber\":\"001\",\"pnr\":\"IGSH5B\",\"familyName\":\"ABERNATHY\",\"VCsnt\":true,\"BVCsnt\":false,\"NVCsnt\":false,\"BNVCsnt\":false,\"PCsnt\":false,\"BPCsnt\":false,\"BECsnt\":false,\"EXCsnt\":false,\"BEXCsnt\":false,\"IVAg\":false,\"BIVAg\":false,\"IEAg\":false,\"IEAg_1\":true,\"IEAg_2\":false,\"IEAg_3\":false,\"IEAg_4\":false,\"IEAg_5\":true,\"IEAg_6\":false,\"IEAg_7\":true,\"IEAg_8\":true,\"IEAg_9\":false,\"BIEAg\":true,\"BIEAg_1\":true,\"BIEAg_2\":false,\"BIEAg_3\":false,\"BIEAg_4\":false,\"BIEAg_5\":false,\"BIEAg_6\":false,\"BIEAg_7\":false,\"BIEAg_8\":false,\"BIEAg_9\":false,\"AAg\":false,\"AAg_1\":false,\"AAg_2\":false,\"AAg_3\":false,\"BAAg\":false,\"BAAg_1\":false,\"BAAg_2\":false,\"BAAg_3\":false,\"SAAg\":false,\"SAAg_1\":false,\"SAAg_2\":false,\"BSAAg\":false,\"BSAAg_1\":false,\"BSAAg_2\":false,\"LDCYes\":false,\"LDCNo\":false,\"sections-0-pageSections-0-quest-0\":true,\"sections-0-pageSections-1-quest-0\":true,\"sections-0-pageSections-2-quest-0\":true,\"selfLDCYes\":false,\"onBehalfLDCYes\":false,\"ContactInfo\":false,\"ContactConfirm\":false,\"userResponse\":\"{\\\"authorizedName\\\":\\\"ABERNATHY/PMCKENZIEMISS\\\",\\\"paxName\\\":\\\"\\\",\\\"userResponse\\\":{\\\"sections-0-pageSections-1-quest-1\\\":true,\\\"sections-0-pageSections-2-quest-0\\\":true,\\\"IEAg\\\":true},\\\"subSectionResponse\\\":{\\\"IEAg_1\\\":\\\"IEAg_9\\\",\\\"BIEAg_4\\\":\\\"BIEAg_4\\\",\\\"BSAAg_1\\\":\\\"BSAAg_1\\\",\\\"BAAg_3\\\":\\\"BAAg_3\\\"}}\"}}"
+              },
+              "example": "{\r\n    \"url\": \"cdu/document/pdf\",\r\n    \"method\": \"POST\",\r\n    \"body\": {\r\n        \"channel\": \"mobile\",\r\n        \"referenceNumber\": \"001\",\r\n        \"pnr\": \"IGSH5B\",\r\n        \"familyName\": \"ABERNATHY\",\r\n        \"VCsnt\": true,\r\n        \"BVCsnt\": false,\r\n        \"NVCsnt\": false,\r\n        \"BNVCsnt\": false,\r\n        \"PCsnt\": false,\r\n        \"BPCsnt\": false,\r\n        \"BECsnt\": false,\r\n        \"EXCsnt\": false,\r\n        \"BEXCsnt\": false,\r\n        \"IVAg\": false,\r\n        \"BIVAg\": false,\r\n        \"IEAg\": false,\r\n        \"IEAg_1\": true,\r\n        \"IEAg_2\": false,\r\n        \"IEAg_3\": false,\r\n        \"IEAg_4\": false,\r\n        \"IEAg_5\": true,\r\n        \"IEAg_6\": false,\r\n        \"IEAg_7\": true,\r\n        \"IEAg_8\": true,\r\n        \"IEAg_9\": false,\r\n        \"BIEAg\": true,\r\n        \"BIEAg_1\": true,\r\n        \"BIEAg_2\": false,\r\n        \"BIEAg_3\": false,\r\n        \"BIEAg_4\": false,\r\n        \"BIEAg_5\": false,\r\n        \"BIEAg_6\": false,\r\n        \"BIEAg_7\": false,\r\n        \"BIEAg_8\": false,\r\n        \"BIEAg_9\": false,\r\n        \"AAg\": false,\r\n        \"AAg_1\": false,\r\n        \"AAg_2\": false,\r\n        \"AAg_3\": false,\r\n        \"BAAg\": false,\r\n        \"BAAg_1\": false,\r\n        \"BAAg_2\": false,\r\n        \"BAAg_3\": false,\r\n        \"SAAg\": false,\r\n        \"SAAg_1\": false,\r\n        \"SAAg_2\": false,\r\n        \"BSAAg\": false,\r\n        \"BSAAg_1\": false,\r\n        \"BSAAg_2\": false,\r\n        \"LDCYes\": false,\r\n        \"LDCNo\": false,\r\n        \"sections-0-pageSections-0-quest-0\": true,\r\n        \"sections-0-pageSections-1-quest-0\": true,\r\n        \"sections-0-pageSections-2-quest-0\": true,\r\n        \"selfLDCYes\": false,\r\n        \"onBehalfLDCYes\": false,\r\n        \"ContactInfo\": false,\r\n        \"ContactConfirm\": false,\r\n        \"userResponse\": \"{\\\"authorizedName\\\":\\\"ABERNATHY/PMCKENZIEMISS\\\",\\\"paxName\\\":\\\"\\\",\\\"userResponse\\\":{\\\"sections-0-pageSections-1-quest-1\\\":true,\\\"sections-0-pageSections-2-quest-0\\\":true,\\\"IEAg\\\":true},\\\"subSectionResponse\\\":{\\\"IEAg_1\\\":\\\"IEAg_9\\\",\\\"BIEAg_4\\\":\\\"BIEAg_4\\\",\\\"BSAAg_1\\\":\\\"BSAAg_1\\\",\\\"BAAg_3\\\":\\\"BAAg_3\\\"}}\"\r\n    }\r\n}"
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/ekcdc/server/cdc/ssk": {
+      "post": {
+        "summary": "02_cdc-mw-search",
+        "operationId": "02_cdc-mw-search",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "/init"
+            }
+          },
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibW9iaWxlIiwiaWF0IjoxNjQwODUzMDE1LCJleHAiOjE2NDA4NTQ4MTV9.Q1jf1bLGdydweAL8o2pftARzF7Y_j42cVutzTP_pAS0"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "example": "{\"url\":\"search\",\"method\":\"POST\",\"pnr\":\"M4KDA6\",\"familyName\":\"ADTHOLLIS\"}"
+              },
+              "example": "{\r\n    \"url\": \"search\",\r\n    \"method\": \"POST\",\r\n    \"pnr\" : \"M4KDA6\",\r\n    \"familyName\" : \"ADTHOLLIS\"\r\n}"
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/ekcdc/server/api/auth/register": {
+      "get": {
+        "summary": "01_cdc-mw-register",
+        "operationId": "01_cdc-mw-register",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "/init"
+            }
+          },
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibW9iaWxlIiwiaWF0IjoxNjQxMzYyMTM5LCJleHAiOjE2NDEzNjM5Mzl9.nPu73WCf6H-J3KZsLNzIMn8dtzN-N9IcPsUiN4FIgJA"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "parameters": {
+      "url": {
+        "name": "url",
+        "in": "query",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "schema": {
+          "type": "string",
+          "example": "/init"
+        }
+      },
+      "x-access-token": {
+        "name": "x-access-token",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "schema": {
+          "type": "string",
+          "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibW9iaWxlIiwiaWF0IjoxNjQwODUzMDE1LCJleHAiOjE2NDA4NTQ4MTV9.Q1jf1bLGdydweAL8o2pftARzF7Y_j42cVutzTP_pAS0"
+        }
+      }
+    }
+  }
+}
